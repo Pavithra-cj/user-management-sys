@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "user_management_sys",
+    "slug": "user_management_sys",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
