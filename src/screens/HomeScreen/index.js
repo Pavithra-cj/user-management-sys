@@ -3,6 +3,7 @@ import { View, Text, FlatList, Image, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { homeScreenStyles as styles } from './styles';
 import PopupWindow from '../../components/PopupWindow';
+import AppHeader from '../../components/header';
 
 const HomeScreen = () => {
   const [data, setData] = useState([]);
@@ -57,6 +58,7 @@ const HomeScreen = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+    <AppHeader/>
       <Text style={styles.title}>Available Users</Text>
       <FlatList
         data={data}
