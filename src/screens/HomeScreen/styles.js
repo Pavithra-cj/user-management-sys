@@ -6,7 +6,7 @@ export const homeScreenStyles = {
     fontWeight: 'bold',
     fontSize: 20,
     marginLeft: 30,
-    marginTop: 45,
+    marginTop: 25,
     marginBottom: 10,
   },
   card: {
@@ -45,5 +45,19 @@ export const homeScreenStyles = {
   },
   normalText: {
     fontWeight: 'normal',
+  },
+  searchView: {
+    padding: 20,
+    backgroundColor: 'white',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    paddingHorizontal: 16,
+  },
+  searchButtonView: {
+    marginLeft: 1,
+  },
+  searchBarContainer: {
+    flex: 1,
   },
 };

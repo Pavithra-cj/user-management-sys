@@ -4,6 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { homeScreenStyles as styles } from './styles';
 import PopupWindow from '../../components/PopupWindow';
 import AppHeader from '../../components/header';
+import SearchComponent from '../../components/search';
 
 const HomeScreen = () => {
   const [data, setData] = useState([]);
@@ -59,6 +60,11 @@ const HomeScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
     <AppHeader/>
+    <View style={styles.searchView}>
+      <View style={styles.searchBarContainer}>
+        <SearchComponent />
+      </View>
+    </View>
       <Text style={styles.title}>Available Users</Text>
       <FlatList
         data={data}
