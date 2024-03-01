@@ -18,23 +18,25 @@ const styles = StyleSheet.create({
     backgroundColor: '#3A86A8',
     alignItems: 'center',
     borderBottomRightRadius: 15,
-    marginLeft: 80,
-    marginRight: 80
+    justifyContent: 'space-around',
+    marginLeft: 20,
+    marginRight: 20
   },
   afterButton: {
     margin: 2,
     padding: 10,
     backgroundColor: '#3A86A8',
     borderBottomRightRadius: 15,
-    marginLeft: 80,
-    marginRight: 80,
     alignItems: 'center',
     position: 'relative',
   },
   buttonText: {
     color: 'white',
     fontWeight: 'bold',
-    fontSize: 15
+    fontSize: 15,
+    justifyContent: 'space-around',
+    marginLeft: 10,
+    marginRight: 10
   },
 });
 

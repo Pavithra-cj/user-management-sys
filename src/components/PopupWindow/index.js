@@ -1,17 +1,14 @@
-    import React from 'react';
-    import { Modal, View, Text, Image, TouchableOpacity } from 'react-native';
-    import styles from './styles';
-    import MyButton from '../button'; 
+import React from 'react';
+import { Modal, View, Text, Image } from 'react-native';
+import styles from './styles';
+import MyButton from '../button';
 
-    const PopupWindow = ({ isVisible, data, onClose }) => {
-    return (
-        <Modal transparent={true} animationType="slide" visible={isVisible}>
+const PopupWindow = ({ isVisible, data, onClose }) => {
+  return (
+    <Modal transparent={true} animationType="slide" visible={isVisible}>
       {isVisible && (
         <View style={styles.popupContainer}>
           <View style={styles.popupContent}>
-            <TouchableOpacity onPress={onClose} style={styles.closeButton}>
-              <Text style={styles.closeButtonText}>Close</Text>
-            </TouchableOpacity>
             <View style={styles.avatarContainer}>
               <Image source={{ uri: data.avatar }} style={styles.popupAvatar} />
               <View style={styles.textContainer}>
@@ -31,7 +28,7 @@
         </View>
       )}
     </Modal>
-    );
-    };
+  );
+};
 
-    export default PopupWindow;
+export default PopupWindow;
