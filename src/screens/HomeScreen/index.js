@@ -38,21 +38,21 @@ const HomeScreen = () => {
 
   const renderItem = ({ item }) => (
     <TouchableOpacity onPress={() => openPopup(item)}>
-      <View style={styles.card}>
-        <View>
-          <View style={styles.userInfoContainer}>
-            <Image
-              source={{ uri: item.avatar }}
-              style={styles.userImage}
-            />
-            <View>
-              <Text>ID: {item.id}</Text>
-              <Text>Name: {item.first_name}</Text>
-            </View>
+    <View style={styles.card}>
+      <View>
+        <View style={styles.userInfoContainer}>
+          <Image
+            source={{ uri: item.avatar }}
+            style={styles.userImage}
+          />
+          <View>
+            <Text style={styles.boldText}>ID: <Text style={styles.normalText}>{item.id}</Text></Text>
+            <Text style={styles.boldText}>Name: <Text style={styles.normalText}>{item.first_name}</Text></Text>
           </View>
         </View>
       </View>
-    </TouchableOpacity>
+    </View>
+  </TouchableOpacity>
   );
 
   return (

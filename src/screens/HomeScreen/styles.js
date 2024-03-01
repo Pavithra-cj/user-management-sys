@@ -1,4 +1,3 @@
-// styles.js
 export const homeScreenStyles = {
   container: {
     flex: 1,
@@ -6,7 +5,7 @@ export const homeScreenStyles = {
   title: {
     fontWeight: 'bold',
     fontSize: 20,
-    marginLeft: 25,
+    marginLeft: 30,
     marginTop: 45,
     marginBottom: 10,
   },
@@ -14,8 +13,8 @@ export const homeScreenStyles = {
     backgroundColor: '#fff',
     padding: 20,
     margin: 7,
-    marginLeft: 20,
-    marginRight: 20,
+    marginLeft: 25,
+    marginRight: 25,
     borderRadius: 16,
     elevation: 4,
     shadowColor: '#000',
@@ -39,5 +38,12 @@ export const homeScreenStyles = {
   },
   loadMoreText: {
     color: 'blue',
+  },
+  boldText: {
+    fontWeight: 'bold',
+    fontSize: 17
+  },
+  normalText: {
+    fontWeight: 'normal',
   },
 };
