@@ -1,37 +1,22 @@
-import React, { useEffect, useRef } from 'react';
-import { View, Image, StyleSheet } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import React, { useEffect } from 'react';
+import { View, Image, Text } from 'react-native';
+import styles from './styles';  
 
-const SplashScreen = () => {
-  const navigation = useNavigation();
-  const timeoutRef = useRef(null);
-
+const SplashScreen = ({ navigation }) => {
   useEffect(() => {
-    timeoutRef.current = setTimeout(() => {
-      navigation.navigate('HomeScreen');
-    }, 3000);
+    const timeout = setTimeout(() => {
+      navigation.replace('Home');
+    }, 5000);
 
-    return () => clearTimeout(timeoutRef.current);
+    return () => clearTimeout(timeout);
   }, [navigation]);
 
   return (
     <View style={styles.container}>
-      <Image source={require('../../assets/Logo/logo.png')} style={styles.image} resizeMode="contain" />
+      <Image source={require('../../assets/Logo/logo.png')} style={styles.logo} />
+      <Text style={styles.text}>LAYOUTindex Demo</Text>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#000',
-  },
-  image: {
-    width: 200,
-    height: 200,
-  },
-});
 
 export default SplashScreen;
