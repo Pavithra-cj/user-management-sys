@@ -1,33 +1,63 @@
 import { StyleSheet } from 'react-native';
 
-export const popupWindowStyles = StyleSheet.create({
+const popupWindowStyles = StyleSheet.create({
   popupContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)', // semi-transparent black background
-  },
-  closeButton: {
-    position: 'absolute',
-    top: 10,
-    right: 10,
-    padding: 10,
-    backgroundColor: 'white',
-    borderRadius: 5,
+    backgroundColor: 'rgba(0, 0, 0, 0.7)',
   },
   closeButtonText: {
-    color: 'black',
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
   },
   popupContent: {
-    backgroundColor: 'white',
-    padding: 20,
-    borderRadius: 10,
-    alignItems: 'center',
+    width: '80%',
+    backgroundColor: '#fff',
+    padding: 16,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 12,
+    elevation: 12,
+    borderBottomRightRadius: 30,
+    borderTopLeftRadius: 30
   },
   popupAvatar: {
-    width: 100,
-    height: 100,
-    borderRadius: 50, // to make the image round
-    marginBottom: 10,
+    width: 70,
+    height: 70,
+    borderRadius: 70,
+    marginBottom: 16,
+    marginTop: 0,
+  },
+  avatarContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 16,
+  },
+  textContainer: {
+    marginLeft: 16,
+  },
+  popupText: {
+    fontSize: 16,
+    color: '#000',
+    marginBottom: 8,
+    fontSize: 16,
+  },
+  boldText: {
+    fontWeight: 'bold',
+  },
+  bottomContainer: {
+    backgroundColor: '#3A86A8',
+    padding: 10,
+    marginTop: 5,
+    alignSelf: 'stretch',
+    alignItems: 'center',
+  },
+  bottomCloseButton: {
+    padding: 2,
   },
 });
+
+export default popupWindowStyles;
